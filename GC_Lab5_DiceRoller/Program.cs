@@ -11,12 +11,46 @@ namespace GC_Lab5_DiceRoller
         static void Main(string[] args)
         {
             Random roll = new Random();
-            Console.WriteLine("Welcome to the Grand Circus Casino! Roll the dice? (y/n)");
-            Console.WriteLine("\nRoll 1:");
-            Console.WriteLine(roll.Next(1, 7));
-            Console.WriteLine(roll.Next(1, 7));
-            Console.WriteLine("Roll again?");
-            Console.ReadLine();      
+            int i = 1;
+            bool run = true;
+            while (run)
+            {
+                Console.Write("Welcome to the Grand Circus Casino! Roll the dice? (y/n):");
+                run = Continue();
+                while (run)
+                {
+                    Console.WriteLine("\nRoll " + i + ": ");
+                    Console.WriteLine(roll.Next(1, 7));
+                    Console.WriteLine(roll.Next(1, 7));
+                    i++;
+                    Console.Write("Roll again? (y/n):");
+                    run = Continue();
+                }
+            }
+            Console.ReadLine();
+        }
+        public static Boolean Continue()
+        {            
+            string input = Console.ReadLine();
+            Boolean run = true;
+            input = input.ToLower();
+
+            if (input == "n")
+            {
+                Console.WriteLine("\nGoodbye!");
+                run = false;
+            }
+            else if (input == "y")
+            {
+                run = true;
+            }
+            else
+            {
+                Console.WriteLine("I'm sorry, I didn't understand your input. Let's try that again!");
+                run = Continue();
+            }
+
+            return run;
         }
     }
 }
