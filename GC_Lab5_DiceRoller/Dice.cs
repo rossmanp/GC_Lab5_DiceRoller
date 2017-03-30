@@ -14,7 +14,9 @@ namespace GC_Lab5_DiceRoller
         {
 
         }
-       
+        
+        //Displays special messages if a user rolls a 2, 7, or 12.
+
         public static void CheckSpecialRoll(int roll1, int roll2)
         {
             if (roll1 + roll2 == 2)

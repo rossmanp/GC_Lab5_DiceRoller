@@ -14,7 +14,6 @@ namespace GC_Lab5_DiceRoller
 
         static void Main(string[] args)
         {
-            Random roll = new Random();
             int i = 1;
             bool run = true;
             int sides;
@@ -23,8 +22,8 @@ namespace GC_Lab5_DiceRoller
                 //If the user indicates "n", the entire loop is skipped and the program ends.        
                 while (run)
                 {
-                    Console.Write("What is the number of sides on each die?");
-                    int.TryParse(Console.ReadLine(), out sides);
+                    Console.Write("What is the number of sides on each die: ");
+                    sides = IntValidator.getIntWithinRange("", 4 , Int32.MaxValue);
                     while (run)
                     {
                         Console.WriteLine("\nRoll " + i + ": ");
@@ -60,7 +59,7 @@ namespace GC_Lab5_DiceRoller
             }
             else
             {
-                Console.WriteLine("I'm sorry, I didn't understand your input. Let's try that again!");
+                Console.WriteLine("I'm sorry, I didn't understand your input. Let's try that again!");                
                 run = Continue();
             }
 
