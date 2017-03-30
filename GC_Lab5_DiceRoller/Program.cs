@@ -20,8 +20,11 @@ namespace GC_Lab5_DiceRoller
                 while (run)
                 {
                     Console.WriteLine("\nRoll " + i + ": ");
-                    Console.WriteLine(roll.Next(1, 7));
-                    Console.WriteLine(roll.Next(1, 7));
+                    int roll1 = Dice.roll.Next(1, 7);
+                    int roll2 = Dice.roll.Next(1, 7);
+                    Console.WriteLine(roll1);
+                    Console.WriteLine(roll2);
+                    Dice.CheckSpecialRoll(roll1, roll2);
                     i++;
                     Console.Write("Roll again? (y/n):");
                     run = Continue();

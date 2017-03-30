@@ -3,3 +3,4 @@ c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab5_DiceRoller
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab5_DiceRoller\GC_Lab5_DiceRoller\bin\Debug\GC_Lab5_DiceRoller.pdb
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab5_DiceRoller\GC_Lab5_DiceRoller\obj\Debug\GC_Lab5_DiceRoller.exe
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab5_DiceRoller\GC_Lab5_DiceRoller\obj\Debug\GC_Lab5_DiceRoller.pdb
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab5_DiceRoller\GC_Lab5_DiceRoller\obj\Debug\GC_Lab5_DiceRoller.csprojResolveAssemblyReference.cache
