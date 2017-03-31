@@ -20,28 +20,23 @@ namespace GC_Lab5_DiceRoller
             Console.Write("Welcome to the Grand Circus Casino! Roll a pair of dice? (y/n):");
             run = Continue();      
                 //If the user indicates "n", the entire loop is skipped and the program ends.        
-                while (run)
-                {
+            while (run)
+            {
                     Console.Write("What is the number of sides on each die: ");
-                    sides = IntValidator.getIntWithinRange("", 4 , Int32.MaxValue);
+                    sides = IntValidator.getIntWithinRange(3, Int32.MaxValue);
                     while (run)
                     {
                         Console.WriteLine("\nRoll " + i + ": ");
-                        int roll1 = Dice.roll.Next(1, sides + 1);
-                        int roll2 = Dice.roll.Next(1, sides + 1);
-                        Console.WriteLine(roll1);
-                        Console.WriteLine(roll2);
-                        //The result of the roll is then passed to CheckSpecialRoll
-                        //in the Dice class to print a line if a 2, 7, or 12 is achieved.
-                        Dice.CheckSpecialRoll(roll1, roll2);
+                        Dice.RollDice(sides);
                         i++;
                         Console.Write("\nRoll again? (y/n):");
                         run = Continue();
                     }
-                }
+             }
             
             Console.ReadLine();
         }
+
         public static Boolean Continue()
         {            
             string input = Console.ReadLine();

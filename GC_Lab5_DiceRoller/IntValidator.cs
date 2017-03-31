@@ -19,7 +19,6 @@ namespace GC_Lab5_DiceRoller
 
         public static int getInt(string prompt)
         {
-
             int.TryParse(prompt, out _myInt);
             while (!int.TryParse(prompt, out _myInt))
             {
@@ -31,7 +30,7 @@ namespace GC_Lab5_DiceRoller
 
         //For the user to proceed, he or she must enter an integer within the specified range.
 
-        public static int getIntWithinRange(string prompt, int min, int max)
+        public static int getIntWithinRange(int min, int max)
         {
             bool run = true;
             IntValidator num = new IntValidator();
